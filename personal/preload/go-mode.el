@@ -1,0 +1,12 @@
+(add-hook 'go-mode-hook
+          (lambda ()
+            (setq require-final-newline t)
+            (show-paren-mode 1)
+            (local-set-key (kbd "M-.") 'godef-jump)
+            (local-set-key (kbd "M-,") 'godef-describe)
+            (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
+            (local-set-key (kbd "C-c i") 'go-goto-imports)
+                                        ;(local-set-key (kbd "C-c C-j") 'go-direx-pop-to-buffer)
+            (local-set-key (kbd "C-c C-t") 'go-test-current-file)
+            (local-set-key (kbd "C-c C-l") 'golint)
+            ))
