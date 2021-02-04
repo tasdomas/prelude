@@ -54,7 +54,8 @@
 (package-initialize)
 
 (defvar prelude-packages
-  '(ace-window
+  '(
+    ;;ace-window
     ag
     avy
     anzu
